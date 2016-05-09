@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="../../Content/ExperienceModule/Css/Reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/ExperienceModule/Css/Style.css" rel="stylesheet" type="text/css" />
+
+    <%=Html.Telerik().StyleSheetRegistrar().DefaultGroup(
+				group => group.Add("telerik.common.min.css")
+                              .Add("telerik.vista.css").DefaultPath("~/Content")
+				         	  .Combined(true)
+				         	  .Compress(true)
+			)%>
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="Wrapper">
+        <!-- Header -->
+        <div id="Header">
+            <!-- Logo -->
+            <a href="/Experience" class="Logo"></a>
+            <!-- End of Logo -->
+            <!-- Sign In -->
+            <a href="#" class="SignIn FR">[Sign In]</a>
+            <!-- End of Sign In -->
+            <div class="Clear">
+            </div>
+            <!-- Menu Header -->
+            <ul class="MenuHeader">
+                <li><a href="/Experience">Experience</a></li>
+                <li><a href="/Experience/Admin/Clients">Clients</a></li>
+                <li><a href="/Experience/Admin/Projects">Projects</a></li>
+                <li><a href="/Test">Tracking Test</a></li>
+                <li><a href="/Test/Chat">Chat Room</a></li>
+            </ul>
+            <!-- End of Menu Header -->
+        </div>
+        <!-- End of Header -->
+        <!-- Container -->
+        <div id="Container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- End of Container -->
+    </div>
+    <!-- End of Wrapper -->
+    <!-- Footer -->
+    <div id="Footer">
+        <p>
+            All contents @ Company Name. All rights reserved.</p>
+    </div>
+    <%=Html.Telerik().ScriptRegistrar().jQuery(true).DefaultGroup(group =>
+		group.DefaultPath("~/Scripts")
+                .Add("jquery-1.4.4.min.js")
+		        .Add("jquery-ui.min.js")
+		        .Combined(true).Compress(true))
+    %>
+    <div class="StatusBar" id="loading" style="display: none; width: 200px;">
+        Please wait, processing...
+    </div>
+</body>
+</html>

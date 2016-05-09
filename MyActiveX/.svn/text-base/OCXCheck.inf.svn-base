@@ -1,0 +1,14 @@
+[Add.Code]
+OCXCheck.ocx=OCXCheck.ocx
+OCXCheck.inf=OCXCheck.inf
+
+[OCXCheck.ocx]
+file=thiscab
+clsid={36299202-09EF-4ABF-ADB9-47C599DBE778}
+RegisterServer=yes
+FileVersion=1,0,0,1
+
+[OCXCheck.inf]
+file=thiscab
+
+

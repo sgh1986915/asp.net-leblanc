@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="robusthavenModelStoreContainer" CdmEntityContainer="robusthavenEntity">
+    <EntitySetMapping Name="AnalyticsChatRooms">
+      <EntityTypeMapping TypeName="robusthavenModel.AnalyticsChatRoom">
+        <MappingFragment StoreEntitySet="AnalyticsChatRoom">
+          <ScalarProperty Name="ChatRoomID" ColumnName="ChatRoomID" />
+          <ScalarProperty Name="ChatRoomName" ColumnName="ChatRoomName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsMessagePools">
+      <EntityTypeMapping TypeName="robusthavenModel.AnalyticsMessagePool">
+        <MappingFragment StoreEntitySet="AnalyticsMessagePool">
+          <ScalarProperty Name="messageID" ColumnName="messageID" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="talkerID" ColumnName="talkerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsSessions">
+      <EntityTypeMapping TypeName="robusthavenModel.AnalyticsSession">
+        <MappingFragment StoreEntitySet="AnalyticsSession">
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="UserAlias" ColumnName="UserAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsTalkers">
+      <EntityTypeMapping TypeName="robusthavenModel.AnalyticsTalker">
+        <MappingFragment StoreEntitySet="AnalyticsTalker">
+          <ScalarProperty Name="TalkerID" ColumnName="TalkerID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="ChatRoomID" ColumnName="ChatRoomID" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

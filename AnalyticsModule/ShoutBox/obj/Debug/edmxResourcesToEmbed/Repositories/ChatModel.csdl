@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="robusthavenModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="robusthavenEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AnalyticsChatRooms" EntityType="robusthavenModel.AnalyticsChatRoom" />
+    <EntitySet Name="AnalyticsMessagePools" EntityType="robusthavenModel.AnalyticsMessagePool" />
+    <EntitySet Name="AnalyticsSessions" EntityType="robusthavenModel.AnalyticsSession" />
+    <EntitySet Name="AnalyticsTalkers" EntityType="robusthavenModel.AnalyticsTalker" />
+    <AssociationSet Name="FK_AnalyticsTalker_AnalyticsChatRoom" Association="robusthavenModel.FK_AnalyticsTalker_AnalyticsChatRoom">
+      <End Role="AnalyticsChatRoom" EntitySet="AnalyticsChatRooms" />
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnalyticsMessagePool_AnalyticsTalker" Association="robusthavenModel.FK_AnalyticsMessagePool_AnalyticsTalker">
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+      <End Role="AnalyticsMessagePool" EntitySet="AnalyticsMessagePools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnalyticsTalker_AnalyticsSession" Association="robusthavenModel.FK_AnalyticsTalker_AnalyticsSession">
+      <End Role="AnalyticsSession" EntitySet="AnalyticsSessions" />
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AnalyticsChatRoom">
+    <Key>
+      <PropertyRef Name="ChatRoomID" />
+    </Key>
+    <Property Name="ChatRoomID" Type="Guid" Nullable="false" />
+    <Property Name="ChatRoomName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AnalyticsTalkers" Relationship="robusthavenModel.FK_AnalyticsTalker_AnalyticsChatRoom" FromRole="AnalyticsChatRoom" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsMessagePool">
+    <Key>
+      <PropertyRef Name="messageID" />
+    </Key>
+    <Property Name="messageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="message" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="SendTime" Type="DateTime" Nullable="false" />
+    <Property Name="talkerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="AnalyticsTalker" Relationship="robusthavenModel.FK_AnalyticsMessagePool_AnalyticsTalker" FromRole="AnalyticsMessagePool" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsSession">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="IP" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserAlias" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AnalyticsTalkers" Relationship="robusthavenModel.FK_AnalyticsTalker_AnalyticsSession" FromRole="AnalyticsSession" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsTalker">
+    <Key>
+      <PropertyRef Name="TalkerID" />
+    </Key>
+    <Property Name="TalkerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SessionID" Type="Int32" Nullable="false" />
+    <Property Name="ChatRoomID" Type="Guid" Nullable="false" />
+    <Property Name="CheckInTime" Type="DateTime" Nullable="false" />
+    <Property Name="CheckOutTime" Type="DateTime" />
+    <NavigationProperty Name="AnalyticsChatRoom" Relationship="robusthavenModel.FK_AnalyticsTalker_AnalyticsChatRoom" FromRole="AnalyticsTalker" ToRole="AnalyticsChatRoom" />
+    <NavigationProperty Name="AnalyticsMessagePools" Relationship="robusthavenModel.FK_AnalyticsMessagePool_AnalyticsTalker" FromRole="AnalyticsTalker" ToRole="AnalyticsMessagePool" />
+    <NavigationProperty Name="AnalyticsSession" Relationship="robusthavenModel.FK_AnalyticsTalker_AnalyticsSession" FromRole="AnalyticsTalker" ToRole="AnalyticsSession" />
+  </EntityType>
+  <Association Name="FK_AnalyticsTalker_AnalyticsChatRoom">
+    <End Role="AnalyticsChatRoom" Type="robusthavenModel.AnalyticsChatRoom" Multiplicity="1" />
+    <End Role="AnalyticsTalker" Type="robusthavenModel.AnalyticsTalker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsChatRoom">
+        <PropertyRef Name="ChatRoomID" />
+      </Principal>
+      <Dependent Role="AnalyticsTalker">
+        <PropertyRef Name="ChatRoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnalyticsMessagePool_AnalyticsTalker">
+    <End Role="AnalyticsTalker" Type="robusthavenModel.AnalyticsTalker" Multiplicity="1" />
+    <End Role="AnalyticsMessagePool" Type="robusthavenModel.AnalyticsMessagePool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsTalker">
+        <PropertyRef Name="TalkerID" />
+      </Principal>
+      <Dependent Role="AnalyticsMessagePool">
+        <PropertyRef Name="talkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnalyticsTalker_AnalyticsSession">
+    <End Role="AnalyticsSession" Type="robusthavenModel.AnalyticsSession" Multiplicity="1" />
+    <End Role="AnalyticsTalker" Type="robusthavenModel.AnalyticsTalker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsSession">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="AnalyticsTalker">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

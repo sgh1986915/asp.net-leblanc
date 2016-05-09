@@ -1,0 +1,937 @@
+#conash3D0
+{
+    display: none;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ General Classes */
+.DI
+{
+    display: inline;
+}
+.DB
+{
+    display: block;
+}
+.FL
+{
+    float: left;
+}
+.FR
+{
+    float: right;
+}
+.CL
+{
+    clear: left;
+}
+.CR
+{
+    clear: right;
+}
+.Clear
+{
+    clear: both;
+}
+.PR
+{
+    position: relative;
+}
+.PA
+{
+    position: absolute;
+}
+
+.LAlign
+{
+    text-align: left;
+}
+.CAlign
+{
+    text-align: center;
+}
+.RAlign
+{
+    text-align: right;
+}
+.TAlign
+{
+    vertical-align: top;
+}
+.MAlign
+{
+    vertical-align: middle;
+}
+.BAlign
+{
+    vertical-align: bottom;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Heading */
+h1, h2, h3, h4, h5, h6
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+h1
+{
+    font-size: 41px;
+    line-height: 45px;
+    color: #8c1b0e;
+}
+h2
+{
+    font-size: 24px;
+    line-height: 28px;
+    color: #5e071b;
+}
+h3
+{
+    color: #5e071b;
+    font-size: 20px;
+    line-height: 24px;
+}
+h4
+{
+    font-size: 18px;
+    line-height: 22px;
+    color: #db8d2b;
+}
+h5
+{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal !important;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /end Heading */
+
+.TxtRed
+{
+    color: #ff0000 !important;
+}
+
+.F10
+{
+    font-size: 10px;
+}
+.F12
+{
+    font-size: 12px;
+}
+.F12
+{
+    font-size: 12px;
+}
+
+a
+{
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover
+{
+    /*color: #fff;*/
+    text-decoration: none;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Margin */
+.MT5
+{
+    margin-top: 5px;
+}
+.MT10
+{
+    margin-top: 10px;
+}
+.MT20
+{
+    margin-top: 20px;
+}
+.MT30
+{
+    margin-top: 30px;
+}
+.MT40
+{
+    margin-top: 40px;
+}
+.MT50
+{
+    margin-top: 50px;
+}
+
+.MR5
+{
+    margin-right: 5px;
+}
+.MR10
+{
+    margin-right: 10px;
+}
+.MR20
+{
+    margin-right: 20px;
+}
+.MR30
+{
+    margin-right: 30px;
+}
+.MR40
+{
+    margin-right: 40px;
+}
+.MR50
+{
+    margin-right: 50px;
+}
+
+.ML5
+{
+    margin-left: 5px;
+}
+.ML10
+{
+    margin-left: 10px;
+}
+.ML20
+{
+    margin-left: 20px;
+}
+.ML30
+{
+    margin-left: 30px;
+}
+.ML40
+{
+    margin-left: 40px;
+}
+.ML50
+{
+    margin-left: 50px;
+}
+
+.MB5
+{
+    margin-bottom: 5px;
+}
+.MB10
+{
+    margin-bottom: 10px;
+}
+.MB20
+{
+    margin-bottom: 20px;
+}
+.MB30
+{
+    margin-bottom: 30px;
+}
+.MB40
+{
+    margin-bottom: 40px;
+}
+.MB50
+{
+    margin-bottom: 50px;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /end Margin */
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Width (DON'T USE PADDING WHILE USING THIS ) */
+.W25
+{
+    width: 23%;
+}
+.W30
+{
+    width: 28%;
+}
+.W40
+{
+    width: 38%;
+}
+.W50
+{
+    width: 48%;
+}
+.W60
+{
+    width: 58%;
+}
+.W70
+{
+    width: 68%;
+}
+.W75
+{
+    width: 73%;
+}
+.W100
+{
+    width: 98%;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /END Width */
+
+p
+{
+    width: 100%;
+    color: #7e7e7e;
+}
+
+.HLine
+{
+    float: left;
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /end General Classes */
+
+body
+{
+    font-family: 'Lucida Sans Unicode' , 'Lucida Grande' , sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    background: #e4e4e4 url(../Images/Bg_Body.png) repeat-x 0 0;
+}
+#Wrapper
+{
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Header  */
+#Header
+{
+    width: 960px;
+    float: left;
+    height: 115px;
+    background: url(../Images/Bg_Header.png) no-repeat 0 70px;
+}
+/*~~~~~~~~~~~~~~~~  Logo  */
+.Logo
+{
+    float: left;
+    width: 264px;
+    height: 44px;
+    margin-top: 10px;
+    background: url(../Images/Logo.png) no-repeat 0 0;
+}
+/*~~~~~~~~~~~~~~  Sign In  */
+.SignIn
+{
+    font-size: 12px;
+    color: #fff;
+    margin-top: 10px;
+}
+.SignIn:hover
+{
+    text-decoration: underline;
+}
+/*~~~~~~~~~~~~~~  Menu Header  */
+.MenuHeader
+{
+    float: right;
+    margin-top: -10px;
+}
+.MenuHeader li
+{
+    float: left;
+}
+.MenuHeader li a
+{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 40px;
+}
+.MenuHeader li:first-child a
+{
+    padding-left: 0;
+}
+.MenuHeader li a:hover
+{
+    text-decoration: underline;
+}
+/*~~~~~~~~~~~~~~~~~  Container  */
+#Container
+{
+    float: left;
+    width: 910px;
+    min-height: 800px;
+    padding: 35px 25px 50px;
+    background: url(../Images/Bg_Container.png) repeat-y center 0;
+}
+#Container h2
+{
+    font-weight: normal;
+}
+/*~~~~~~~~~~~~~~  Gallery  */
+.Gallery
+{
+    float: left;
+    width: 590px;
+}
+.Gallery a img
+{
+    /*  margin-left:45px;*/
+}
+/** 
+ * Slideshow controls style rules.
+ */
+.featuredHero, .featuredContent
+{
+    /*   width:480px;*/
+    margin-top: 10px;
+}
+.featuredContent
+{
+    width: 477px; /*    margin-left:45px;*/
+}
+.featuredContent h3
+{
+    font-weight: normal;
+}
+.featuredContent p a
+{
+    font-size: 12px;
+    color: #16829B;
+}
+.featuredContent p a:hover
+{
+    text-decoration: underline;
+}
+.control
+{
+    display: none;
+    width: 43px;
+    height: 42px;
+    z-index: 1000;
+    position: absolute;
+    cursor: pointer;
+}
+#leftControl
+{
+    display: none;
+    margin-top: 170px; /*background: transparent url(../Images/Sprit_Navigation.png) no-repeat 0 0;*/
+}
+#rightControl
+{
+    display: none;
+    margin-left: 433px;
+    margin-top: -240px; /*background: transparent url(../Images/Sprit_Navigation.png) no-repeat 0 -42px;*/
+}
+.Gallery:hover #leftControl
+{
+    display: block;
+    background: transparent url(../Images/Sprit_Navigation.png) no-repeat 0 0;
+}
+.Gallery:hover #rightControl
+{
+    display: block;
+    background: transparent url(../Images/Sprit_Navigation.png) no-repeat 0 -42px;
+}
+/*~~~~~~~~~~~~~~~~~~  Grid590  */
+.Grid590
+{
+    float: left;
+    width: 590px;
+}
+.Grid590 h1, .Grid590 h4
+{
+    font-weight: normal;
+}
+.Grid280 h2
+{
+    font-family: 'Lucida Sans Unicode' , 'Lucida Grande' , sans-serif;
+    font-weight: normal;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ea8562;
+}
+
+/*~~~~~~~~~~~~~~~~~~  Grid280  */
+.Grid280
+{
+    float: right;
+    width: 280px;
+}
+/*~~~~~~~~~~~~~~~~~  Inner Image  */
+.InnerImage
+{
+    float: left;
+    width: 590px;
+    height: 400px;
+    margin-top: 10px;
+}
+/*~~~~~~~~~~~~~~~~~  Menu Right  */
+ul.MenuRight
+{
+    float: left;
+    margin-top: 15px;
+}
+ul.MenuRight li
+{
+    float: left;
+    width: 280px;
+}
+ul.MenuRight li a
+{
+    float: left;
+}
+/*For count 0 to 10*/
+ul.MenuRight li a.F13
+{
+    font-size: 13px;
+    line-height: 17px;
+    color: #16829b;
+}
+/*For count 10 to 15*/
+ul.MenuRight li a.F16
+{
+    font-size: 16px;
+    line-height: 20px;
+    color: #87a8e1;
+}
+/*For cunt 16 to 20*/
+ul.MenuRight li a.F20
+{
+    font-size: 20px;
+    line-height: 24px;
+    color: #00add5;
+}
+/*For cunt 21 to 25*/
+ul.MenuRight li a.F26
+{
+    font-size: 26px;
+    line-height: 30px;
+    color: #00add5;
+}
+/*For cunt 26 or more...*/
+ul.MenuRight li a.F41
+{
+    font-size: 41px;
+    line-height: 45px;
+    color: #87e0f5;
+}
+
+ul.MenuRight li a.F13:hover, ul.MenuRight li a.F16:hover, ul.MenuRight li a.F20:hover, ul.MenuRight li a.F26:hover, ul.MenuRight li a.F41:hover
+{
+    text-decoration: underline;
+}
+/*~~~~~~~~~~~~~~~~~~~~  Portfolio  */
+ul.Portfolio
+{
+    float: left;
+}
+ul.Portfolio li
+{
+    float: left;
+    margin-top: 20px;
+    margin-right: 22px;
+    margin-left: 22px;
+}
+.PortfolioInfo
+{
+    float: left;
+    width: 258px;
+}
+.PortfolioInfo a img
+{
+    float: left;
+    width: 258px;
+    height: 178px;
+}
+.PortfolioInfo a
+{
+    float: left;
+    font-size: 18px;
+    line-height: 22px;
+    color: #db8d2b;
+    text-transform: capitalize;
+}
+.PortfolioInfo a:hover
+{
+    text-decoration: underline;
+}
+.PortfolioInfo p
+{
+    height: 160px;
+}
+.PortfolioInfo p span
+{
+    float: left;
+    width: 258px;
+    clear: both;
+    color: #3a5c66;
+    margin-bottom: 10px;
+}
+.PortfolioInfo p a
+{
+    float: none;
+    font-size: 12px;
+    color: #16829B;
+}
+.PortfolioInfo p a:hover
+{
+    text-decoration: underline;
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Footer  */
+#Footer
+{
+    height: 30px;
+    text-align: center;
+    padding-top: 15px;
+    background: #200001;
+}
+#Footer p
+{
+    font-size: 13px;
+    color: #827676;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ PAGER */
+.PagerWrapper
+{
+    float: left;
+    display: inline;
+    width: 100%;
+    height: 22px;
+    padding-top: 5px;
+    margin-top: 30px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+    background: #f7f7f7;
+}
+.PagerLeft
+{
+    float: left;
+    display: inline;
+    width: 115px;
+    margin: 0 0 0 5px;
+}
+.PagerLeft ul
+{
+    float: left;
+    width: auto;
+}
+.PagerLeft ul li
+{
+    float: left !important;
+    clear: none !important;
+    border: none;
+    width: auto !important;
+}
+.PagerLeft ul li a
+{
+    float: left;
+    display: block;
+    color: #7E7E7E;
+    margin: 0 1px;
+    padding: 1px 4px;
+    font-size: 14px;
+    line-height: 13px;
+    font-weight: normal;
+    text-decoration: none;
+}
+.PagerLeft ul li a:hover, .PagerLeft ul li a.Active
+{
+    color: #16829B;
+}
+.PagerRight
+{
+    float: right;
+    display: inline;
+    width: 260px;
+    margin: 0 5px 0 0;
+    text-align: right;
+}
+.PagerRight ul
+{
+    float: right;
+    width: auto;
+}
+.PagerRight ul li
+{
+    float: left !important;
+    clear: none !important;
+    border: none;
+    width: auto !important;
+}
+.PagerRight ul li a
+{
+    float: left;
+    display: block;
+    color: #7ba16a;
+    margin: 0 1px;
+    padding: 1px 4px;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: normal;
+    background: #ffffff;
+    text-decoration: none;
+    border: 1px solid #a3c793;
+}
+.PagerRight ul li a:hover, .PagerRight ul li a.Active
+{
+    color: #ebf6e7;
+    background: #a3c793;
+}
+
+.PagerWrapper select
+{
+    height: 18px;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: normal;
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ /end PAGER */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Status Bar */
+.StatusBar
+{
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    height: 16px;
+    padding: 5px;
+    color: white;
+    z-index: 1010;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: auto;
+    background: #000000;
+    border: solid 1px #c7e1bc;
+}
+.StatusBarHighlight
+{
+    color: White;
+    font-weight: bold;
+    background: #b22222;
+}
+.LoaderAni
+{
+    float: left;
+    width: 31px;
+    height: 31px;
+    position: relative;
+    margin: 10px 0 10px 450px;
+    background: url(../images/ajax-loader.gif) no-repeat 0 0;
+}
+.LoaderAniA
+{
+    float: left;
+    width: 31px;
+    height: 31px;
+    position: relative;
+    background: url(../images/ajax-loader.gif) no-repeat 0 0;
+}
+/********************************Page Loading*/
+
+.button
+{
+    width: 80px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Width (DON'T USE PADDING WHILE USING THIS ) */
+.W25
+{
+    width: 23%;
+}
+.W30
+{
+    width: 28%;
+}
+.W40
+{
+    width: 38%;
+}
+.W50
+{
+    width: 48%;
+}
+.W60
+{
+    width: 58%;
+}
+.W70
+{
+    width: 68%;
+}
+.W75
+{
+    width: 75%;
+}
+.W100
+{
+    width: 98%;
+}
+.W221
+{
+    width: 221px;
+}
+.W282
+{
+    width: 282px;
+}
+.W475
+{
+    width: 475px;
+}
+.W565
+{
+    width: 565px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~  Icons  */
+a.EditIcon, a.AddIcon, a.DeleteIcon, .ViewIcon
+{
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+a.EditIcon
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat 0 0;
+}
+a.EditIcon:hover
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat -16px 0;
+}
+
+
+a.AddIcon
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat 0 -16px;
+}
+a.AddIcon:hover
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat -16px -16px;
+}
+
+a.DeleteIcon
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat 0 -32px;
+}
+a:hover.DeleteIcon
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat -16px -32px;
+}
+
+a.ViewIcon
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat 0 -48px;
+}
+a.ViewIcon:hover
+{
+    background: url("../Images/Sprit_Icons.png") no-repeat -16px -48px;
+}
+
+
+/***********Clouds***************/
+
+div#tagcloud a.smallest
+{
+    font-size: 13px;
+    line-height: 17px;
+    color: #16829b;
+}
+div#tagcloud  a.small
+{
+    font-size: 16px;
+    line-height: 20px;
+    color: #16829b;
+}
+
+div#tagcloud  a.medium
+{
+    font-size: 20px;
+    line-height: 24px;
+    color: #16829b;
+}
+
+div#tagcloud  a.big
+{
+    font-size: 26px;
+    line-height: 30px;
+    color: #16829b;
+}
+
+div#tagcloud  a.biggest
+{
+    font-size: 41px;
+    line-height: 45px;
+    color: #16829b;
+}
+
+div#tagcloud a.smallest:hover,div#tagcloud  a.small:hover,div#tagcloud a.medium:hover,div#tagcloud a.big:hover,div#tagcloud a.biggest:hover
+{
+    text-decoration: underline;
+}
+
+
+/* ________________________ Form-Data */
+/* ________________________ Label */
+
+
+label {
+	float: left;
+	color: #5e7463;
+	font-size: 13px;
+	line-height: 18px;
+	font-weight: normal;
+	text-align: right;
+	margin-right: 5px;
+}
+.LS label, label.LS {
+	width: 80px;
+}
+.LM label, label.LM {
+	width: 100px;
+}
+.LL label, label.LL {
+	width: 150px;
+}
+
+.LAlign label, label.LAlign, .LAlign label, label.LAlign, .LAlign label, label.LAlign {
+	text-align: left !important;
+}
+.TxtCap label, label.TxtCap {
+	text-transform: uppercase;
+}
+/* ________________________ /end Label */
+
+input[type="text"], input[type="password"]	{
+	border:1px solid #afafaf;
+	margin-bottom:6px;
+}
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus	{
+	border:1px solid #333333;
+}
+textarea	{
+	border:1px solid #afafaf;
+	margin-bottom:6px;
+}
+input.error, input[type="radio"].error, input.input-validation-error, .input-validation-error, textarea.error
+{
+    border: 1px solid #ff0000 !important;
+    background: #ffeeee;
+}
+
+
+.field-validation-error	{
+	color:#ff0000;
+	font-size:12px;
+	line-height:16px;
+	font-weight:normal;
+}
+
+.t-datetimepicker { margin-bottom:6px;	}

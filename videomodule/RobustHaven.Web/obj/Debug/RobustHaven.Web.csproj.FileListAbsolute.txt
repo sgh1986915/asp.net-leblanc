@@ -1,0 +1,9 @@
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\RobustHaven.Web.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\RobustHaven.Web.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\Microsoft.Practices.Unity.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\Microsoft.Practices.Unity.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\obj\Debug\RobustHaven.Web.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Web\obj\Debug\RobustHaven.Web.pdb

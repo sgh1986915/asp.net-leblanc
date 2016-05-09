@@ -1,0 +1,6 @@
+<?flexibleconfig
+String DevId = "$(DevId)".ToUpper();
+String DevLocation = "$(DevLocation)".ToUpper();
+String DevTask = "$(DevTask)".ToUpper();
+String ApplicationId = "$(ApplicationId)";
+?>

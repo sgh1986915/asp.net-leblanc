@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VideoModuleModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="VideoModuleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Stores" EntityType="VideoModuleModel.Store" />
+    <EntitySet Name="VideoModuleUserCameraPresets" EntityType="VideoModuleModel.VideoModuleUserCameraPreset" />
+    <EntitySet Name="aspnet_Membership" EntityType="VideoModuleModel.aspnet_Membership" />
+    <EntitySet Name="aspnet_Users" EntityType="VideoModuleModel.aspnet_Users" />
+    <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="VideoModuleModel.FK__aspnet_Me__UserI__22AA2996">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <EntitySet Name="VideoModuleCameras" EntityType="VideoModuleModel.VideoModuleCamera" />
+    <EntitySet Name="VideoModuleUser_Camera" EntityType="VideoModuleModel.VideoModuleUser_Camera" />
+    <AssociationSet Name="FK_VideoModuleUser_Camera_aspnet_Users" Association="VideoModuleModel.FK_VideoModuleUser_Camera_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="VideoModuleUser_Camera" EntitySet="VideoModuleUser_Camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VideoModuleCamera_Store" Association="VideoModuleModel.FK_VideoModuleCamera_Store">
+      <End Role="Store" EntitySet="Stores" />
+      <End Role="VideoModuleCamera" EntitySet="VideoModuleCameras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VideoModuleUser_Camera_Camera" Association="VideoModuleModel.FK_VideoModuleUser_Camera_Camera">
+      <End Role="VideoModuleCamera" EntitySet="VideoModuleCameras" />
+      <End Role="VideoModuleUser_Camera" EntitySet="VideoModuleUser_Camera" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VideoModuleUser_Camera_Preset" Association="VideoModuleModel.FK_VideoModuleUser_Camera_Preset">
+      <End Role="VideoModuleUserCameraPreset" EntitySet="VideoModuleUserCameraPresets" />
+      <End Role="VideoModuleUser_Camera" EntitySet="VideoModuleUser_Camera" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Guid" Nullable="false" />
+    <Property Name="chain_id" Type="Guid" Nullable="false" />
+    <Property Name="storename" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Unit" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Latitude" Type="Double" Nullable="false" />
+    <Property Name="Longitude" Type="Double" Nullable="false" />
+    <Property Name="Address1" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Zip" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="LocationEmail" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="Fax" Type="String" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="IsDeployed" Type="Boolean" Nullable="false" />
+    <Property Name="DeployedDate" Type="DateTime" />
+    <Property Name="TrialStart" Type="DateTime" />
+    <Property Name="IsBilling" Type="Boolean" />
+    <Property Name="IsInTrialPeriod" Type="Boolean" />
+    <Property Name="TimeZoneID" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="VideoModuleCameras" Relationship="VideoModuleModel.FK_VideoModuleCamera_Store" FromRole="Store" ToRole="VideoModuleCamera" />
+  </EntityType>
+  <EntityType Name="VideoModuleUserCameraPreset">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="VideoModuleUser_Camera" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_Preset" FromRole="VideoModuleUserCameraPreset" ToRole="VideoModuleUser_Camera" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="PasswordFormat" Nullable="false" />
+    <Property Type="String" Name="PasswordSalt" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobilePIN" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Email" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredEmail" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordQuestion" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PasswordAnswer" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsApproved" Nullable="false" />
+    <Property Type="Boolean" Name="IsLockedOut" Nullable="false" />
+    <Property Type="DateTime" Name="CreateDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastLoginDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastPasswordChangedDate" Nullable="false" />
+    <Property Type="DateTime" Name="LastLockoutDate" Nullable="false" />
+    <Property Type="Int32" Name="FailedPasswordAttemptCount" Nullable="false" />
+    <Property Type="DateTime" Name="FailedPasswordAttemptWindowStart" Nullable="false" />
+    <Property Type="Int32" Name="FailedPasswordAnswerAttemptCount" Nullable="false" />
+    <Property Type="DateTime" Name="FailedPasswordAnswerAttemptWindowStart" Nullable="false" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="aspnet_Users" Relationship="VideoModuleModel.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Guid" Name="ApplicationId" Nullable="false" />
+    <Property Type="Guid" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LoweredUserName" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MobileAlias" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="IsAnonymous" Nullable="false" />
+    <Property Type="DateTime" Name="LastActivityDate" Nullable="false" />
+    <NavigationProperty Name="aspnet_Membership" Relationship="VideoModuleModel.FK__aspnet_Me__UserI__22AA2996" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
+    <NavigationProperty Name="VideoModuleUser_Camera" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_aspnet_Users" FromRole="aspnet_Users" ToRole="VideoModuleUser_Camera" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__UserI__22AA2996">
+    <End Type="VideoModuleModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="VideoModuleModel.aspnet_Membership" Role="aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="VideoModuleCamera">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="StoreID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CameraNumber" Nullable="false" />
+    <Property Type="String" Name="DNSRecord" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Store" Relationship="VideoModuleModel.FK_VideoModuleCamera_Store" FromRole="VideoModuleCamera" ToRole="Store" />
+    <NavigationProperty Name="VideoModuleUser_Camera" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_Camera" FromRole="VideoModuleCamera" ToRole="VideoModuleUser_Camera" />
+  </EntityType>
+  <EntityType Name="VideoModuleUser_Camera">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="UserID" Nullable="false" />
+    <Property Type="Guid" Name="CameraID" Nullable="false" />
+    <Property Type="Guid" Name="PresetID" Nullable="false" />
+    <NavigationProperty Name="aspnet_Users" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_aspnet_Users" FromRole="VideoModuleUser_Camera" ToRole="aspnet_Users" />
+    <NavigationProperty Name="VideoModuleCamera" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_Camera" FromRole="VideoModuleUser_Camera" ToRole="VideoModuleCamera" />
+    <NavigationProperty Name="VideoModuleUserCameraPreset" Relationship="VideoModuleModel.FK_VideoModuleUser_Camera_Preset" FromRole="VideoModuleUser_Camera" ToRole="VideoModuleUserCameraPreset" />
+  </EntityType>
+  <Association Name="FK_VideoModuleUser_Camera_aspnet_Users">
+    <End Type="VideoModuleModel.aspnet_Users" Role="aspnet_Users" Multiplicity="1" />
+    <End Type="VideoModuleModel.VideoModuleUser_Camera" Role="VideoModuleUser_Camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="VideoModuleUser_Camera">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VideoModuleCamera_Store">
+    <End Type="VideoModuleModel.Store" Role="Store" Multiplicity="1" />
+    <End Type="VideoModuleModel.VideoModuleCamera" Role="VideoModuleCamera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Store">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="VideoModuleCamera">
+        <PropertyRef Name="StoreID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VideoModuleUser_Camera_Camera">
+    <End Type="VideoModuleModel.VideoModuleCamera" Role="VideoModuleCamera" Multiplicity="1" />
+    <End Type="VideoModuleModel.VideoModuleUser_Camera" Role="VideoModuleUser_Camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VideoModuleCamera">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VideoModuleUser_Camera">
+        <PropertyRef Name="CameraID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VideoModuleUser_Camera_Preset">
+    <End Type="VideoModuleModel.VideoModuleUserCameraPreset" Role="VideoModuleUserCameraPreset" Multiplicity="1" />
+    <End Type="VideoModuleModel.VideoModuleUser_Camera" Role="VideoModuleUser_Camera" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VideoModuleUserCameraPreset">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="VideoModuleUser_Camera">
+        <PropertyRef Name="PresetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild
+END
+Web.config
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/Web.config
+END
+build.proj
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/build.proj
+END
+DatabaseChangeManagement.config
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/DatabaseChangeManagement.config
+END
+RobustHaven.Tasks.Targets
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/RobustHaven.Tasks.Targets
+END
+useroptions.include
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/useroptions.include
+END
+RobustHaven.Tasks.dll
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/MSBuild/RobustHaven.Tasks.dll
+END

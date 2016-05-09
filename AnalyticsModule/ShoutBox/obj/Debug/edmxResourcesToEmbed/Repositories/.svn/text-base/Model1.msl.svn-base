@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AreaModuleModelStoreContainer" CdmEntityContainer="AreaModuleEntities">
+    <EntitySetMapping Name="AnalyticsChatRooms">
+      <EntityTypeMapping TypeName="AreaModuleModel.AnalyticsChatRoom">
+        <MappingFragment StoreEntitySet="AnalyticsChatRoom">
+          <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+          <ScalarProperty Name="MaxUserNumber" ColumnName="MaxUserNumber" />
+          <ScalarProperty Name="NeedPassword" ColumnName="NeedPassword" />
+          <ScalarProperty Name="ChatRoomName" ColumnName="ChatRoomName" />
+          <ScalarProperty Name="ChatRoomPassword" ColumnName="ChatRoomPassword" />
+          <ScalarProperty Name="ChatRoomID" ColumnName="ChatRoomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsMessagePools">
+      <EntityTypeMapping TypeName="AreaModuleModel.AnalyticsMessagePool">
+        <MappingFragment StoreEntitySet="AnalyticsMessagePool">
+          <ScalarProperty Name="talkerID" ColumnName="talkerID" />
+          <ScalarProperty Name="SendTime" ColumnName="SendTime" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="messageID" ColumnName="messageID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsSessions">
+      <EntityTypeMapping TypeName="AreaModuleModel.AnalyticsSession">
+        <MappingFragment StoreEntitySet="AnalyticsSession">
+          <ScalarProperty Name="UserAlias" ColumnName="UserAlias" />
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalyticsTalkers">
+      <EntityTypeMapping TypeName="AreaModuleModel.AnalyticsTalker">
+        <MappingFragment StoreEntitySet="AnalyticsTalker">
+          <ScalarProperty Name="CheckOutTime" ColumnName="CheckOutTime" />
+          <ScalarProperty Name="CheckInTime" ColumnName="CheckInTime" />
+          <ScalarProperty Name="ChatRoomID" ColumnName="ChatRoomID" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="TalkerID" ColumnName="TalkerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

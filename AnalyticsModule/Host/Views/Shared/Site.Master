@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+    <link href="../../Content/ExperienceModule/Css/Reset.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/ExperienceModule/Css/Style.css" rel="stylesheet" type="text/css" />
+    <%=Html.Telerik().StyleSheetRegistrar().DefaultGroup(
+				group => group.Add("telerik.common.min.css")
+				         	.Add("telerik.default.css").DefaultPath("~/Content")
+				         	.Combined(true)
+				         	.Compress(true)
+			                  	)%>
+    <asp:ContentPlaceHolder ID="HeaderContent" runat="server" />
+</head>
+<body>
+    <div id="Wrapper">
+        <!-- Header -->
+        <div id="Header">
+            <!-- Logo -->
+            <a href="/Experience" class="Logo"></a>
+            <!-- End of Logo -->
+            <!-- Sign In -->
+            <a href="#" class="SignIn FR">[Sign In]</a>
+            <!-- End of Sign In -->
+            <div class="Clear">
+            </div>
+            <!-- Menu Header -->
+            <ul class="MenuHeader">
+                <li><a href="/Experience">Experience</a></li>
+                <li><a href="/Experience/Admin/Clients">Clients</a></li>
+                <li><a href="/Experience/Admin/Projects">Projects</a></li>
+            </ul>
+            <!-- End of Menu Header -->
+        </div>
+        <!-- End of Header -->
+        <!-- Container -->
+        <div id="Container">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- End of Container -->
+    </div>
+    <!-- End of Wrapper -->
+    <!-- Footer -->
+    <div id="Footer">
+        <p>
+            All contents @ Company Name. All rights reserved.</p>
+    </div>
+    <script src="../../Scripts/jquery-1.4.4.min.js" type="text/javascript"></script>
+    <script src="../../Scripts/common.js" type="text/javascript"></script>
+    <%=Html.Telerik().ScriptRegistrar().jQuery(true).DefaultGroup(group =>
+		group.DefaultPath("~/Scripts")
+		.Add("jquery.validate.js")
+		.Add("MicrosoftAjax.js")
+		.Add("MicrosoftMvcAjax.js")
+		.Add("MicrosoftMvcValidation.js")
+		.Add("jquery.validate.unobtrusive.js")
+		.Combined(true).Compress(true))%>
+    <div class="StatusBar" id="loading" style="display: none; width: 200px;">
+        Please wait, processing...
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/indiv_scottso/!svn/ver/227/AnalyticsModule/ShoutBox
+END
+Web.Config
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/indiv_scottso/!svn/ver/242/AnalyticsModule/ShoutBox/Web.Config
+END
+ShoutBoxAreaRegistration.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/ShoutBoxAreaRegistration.cs
+END
+ShoutBox.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/ShoutBox.csproj.user
+END
+HtmlHelperExt.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/HtmlHelperExt.cs
+END
+ShoutBox.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/indiv_scottso/!svn/ver/243/AnalyticsModule/ShoutBox/ShoutBox.csproj
+END

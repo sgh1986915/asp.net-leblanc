@@ -1,0 +1,17 @@
+<?flexibleconfig
+	String DevId = "$(DevId)".ToUpper();
+	String DevLocation = "$(DevLocation)".ToUpper();
+	String DevTask = "$(DevTask)".ToUpper();
+	String ApplicationId = "$(ApplicationId)".ToUpper();
+
+	string database = ApplicationId;
+	string server = @"";
+	switch(DevId)
+	{
+		case "MDINGALLA":
+		case "DENIS":
+		case "LEBLANC":
+			server = @".";
+			break;
+	}
+?>

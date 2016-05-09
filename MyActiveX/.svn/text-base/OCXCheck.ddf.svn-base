@@ -1,0 +1,11 @@
+.OPTION EXPLICIT
+    .Set Cabinet=on
+    .Set Compress=on
+    .Set MaxDiskSize=CDROM
+    .Set ReservePerCabinetSize=6144
+    .Set DiskDirectoryTemplate=
+    .Set CompressionType=MSZIP
+    .Set CompressionMemory=21
+    .Set CabinetNameTemplate=OCXCheck.cab
+    "C:\svn\individuals\indiv_scottso\MyActiveX\OCXCheck.inf"
+    "C:\svn\individuals\indiv_scottso\MyActiveX\OCXCheck.ocx"

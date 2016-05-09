@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/AnalyticsModule/Models
+END
+RouteTrackValidation.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/indiv_scottso/!svn/ver/206/AnalyticsModule/AnalyticsModule/Models/RouteTrackValidation.cs
+END
+Model.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/indiv_scottso/!svn/ver/206/AnalyticsModule/AnalyticsModule/Models/Model.Designer.cs
+END
+AnalyticsModuleRouteTrack.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/indiv_scottso/!svn/ver/206/AnalyticsModule/AnalyticsModule/Models/AnalyticsModuleRouteTrack.cs
+END
+Model.edmx
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/indiv_scottso/!svn/ver/206/AnalyticsModule/AnalyticsModule/Models/Model.edmx
+END
+AnalyticsModuleObjectContext.cs
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/AnalyticsModule/Models/AnalyticsModuleObjectContext.cs
+END

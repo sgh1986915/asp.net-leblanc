@@ -1,0 +1,10 @@
+E:\ODesk\Leblanc\AnalyticsModule\ShoutBox\bin\RobustHaven.Areas.ShoutBox.dll
+E:\ODesk\Leblanc\AnalyticsModule\ShoutBox\bin\RobustHaven.Areas.ShoutBox.pdb
+E:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\ResolveAssemblyReference.cache
+E:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\RobustHaven.Areas.ShoutBox.dll
+E:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\RobustHaven.Areas.ShoutBox.pdb
+D:\ODesk\Leblanc\AnalyticsModule\ShoutBox\bin\RobustHaven.Areas.ShoutBox.dll
+D:\ODesk\Leblanc\AnalyticsModule\ShoutBox\bin\RobustHaven.Areas.ShoutBox.pdb
+D:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\ShoutBox.csprojResolveAssemblyReference.cache
+D:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\RobustHaven.Areas.ShoutBox.dll
+D:\ODesk\Leblanc\AnalyticsModule\ShoutBox\obj\Debug\RobustHaven.Areas.ShoutBox.pdb

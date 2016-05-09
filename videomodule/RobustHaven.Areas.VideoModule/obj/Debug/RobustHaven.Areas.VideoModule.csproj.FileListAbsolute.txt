@@ -1,0 +1,13 @@
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\RobustHaven.Areas.VideoModule.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\RobustHaven.Areas.VideoModule.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\Microsoft.Practices.Unity.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\MvcContrib.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\RobustHaven.Web.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\Telerik.Web.Mvc.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\RobustHaven.Web.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\Microsoft.Practices.Unity.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\obj\Debug\RobustHaven.Areas.VideoModule.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\RobustHaven.Areas.VideoModule\obj\Debug\RobustHaven.Areas.VideoModule.pdb

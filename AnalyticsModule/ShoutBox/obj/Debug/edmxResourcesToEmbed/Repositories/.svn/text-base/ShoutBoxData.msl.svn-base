@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TradingViewsModelStoreContainer" CdmEntityContainer="TradingViewsEntities">
+    <EntitySetMapping Name="ShoutBoxes">
+      <EntityTypeMapping TypeName="TradingViewsModel.ShoutBox">
+        <MappingFragment StoreEntitySet="ShoutBox">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="message" ColumnName="message" />
+          <ScalarProperty Name="createdon" ColumnName="createdon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs
+END
+MvcContrib.dll
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/MvcContrib.dll
+END
+RobustHaven.Areas.SecurityModule.dll
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/RobustHaven.Areas.SecurityModule.dll
+END
+GeoLite.dll
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/GeoLite.dll
+END
+RobustHaven.Web.dll
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/RobustHaven.Web.dll
+END
+OpenIdRelyingPartyWebForms.dll
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/OpenIdRelyingPartyWebForms.dll
+END
+DotNetOpenAuth.ApplicationBlock.dll
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/DotNetOpenAuth.ApplicationBlock.dll
+END
+Telerik.Web.Mvc.dll
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/Telerik.Web.Mvc.dll
+END
+DotNetOpenAuth.dll
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Externs/DotNetOpenAuth.dll
+END

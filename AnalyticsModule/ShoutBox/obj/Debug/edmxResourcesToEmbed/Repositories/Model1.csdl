@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AreaModuleModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="AreaModuleEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AnalyticsChatRooms" EntityType="AreaModuleModel.AnalyticsChatRoom" />
+    <EntitySet Name="AnalyticsMessagePools" EntityType="AreaModuleModel.AnalyticsMessagePool" />
+    <EntitySet Name="AnalyticsSessions" EntityType="AreaModuleModel.AnalyticsSession" />
+    <EntitySet Name="AnalyticsTalkers" EntityType="AreaModuleModel.AnalyticsTalker" />
+    <AssociationSet Name="FK_AnalyticsTalker_AnalyticsChatRoom" Association="AreaModuleModel.FK_AnalyticsTalker_AnalyticsChatRoom">
+      <End Role="AnalyticsChatRoom" EntitySet="AnalyticsChatRooms" />
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnalyticsMessagePool_AnalyticsTalker" Association="AreaModuleModel.FK_AnalyticsMessagePool_AnalyticsTalker">
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+      <End Role="AnalyticsMessagePool" EntitySet="AnalyticsMessagePools" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AnalyticsTalker_AnalyticsSession" Association="AreaModuleModel.FK_AnalyticsTalker_AnalyticsSession">
+      <End Role="AnalyticsSession" EntitySet="AnalyticsSessions" />
+      <End Role="AnalyticsTalker" EntitySet="AnalyticsTalkers" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AnalyticsChatRoom">
+    <Key>
+      <PropertyRef Name="ChatRoomID" />
+    </Key>
+    <Property Type="Guid" Name="ChatRoomID" Nullable="false" />
+    <Property Type="String" Name="ChatRoomPassword" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ChatRoomName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="NeedPassword" Nullable="false" />
+    <Property Type="Int32" Name="MaxUserNumber" Nullable="false" />
+    <Property Type="Boolean" Name="IsLock" Nullable="false" />
+    <NavigationProperty Name="AnalyticsTalkers" Relationship="AreaModuleModel.FK_AnalyticsTalker_AnalyticsChatRoom" FromRole="AnalyticsChatRoom" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsMessagePool">
+    <Key>
+      <PropertyRef Name="messageID" />
+    </Key>
+    <Property Type="Int32" Name="messageID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="message" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="SendTime" Nullable="false" />
+    <Property Type="Int32" Name="talkerID" Nullable="false" />
+    <NavigationProperty Name="AnalyticsTalker" Relationship="AreaModuleModel.FK_AnalyticsMessagePool_AnalyticsTalker" FromRole="AnalyticsMessagePool" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsSession">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Type="Int32" Name="UID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="SessionID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="IP" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserAlias" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AnalyticsTalkers" Relationship="AreaModuleModel.FK_AnalyticsTalker_AnalyticsSession" FromRole="AnalyticsSession" ToRole="AnalyticsTalker" />
+  </EntityType>
+  <EntityType Name="AnalyticsTalker">
+    <Key>
+      <PropertyRef Name="TalkerID" />
+    </Key>
+    <Property Type="Int32" Name="TalkerID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SessionID" Nullable="false" />
+    <Property Type="Guid" Name="ChatRoomID" Nullable="false" />
+    <Property Type="DateTime" Name="CheckInTime" Nullable="false" />
+    <Property Type="DateTime" Name="CheckOutTime" />
+    <NavigationProperty Name="AnalyticsChatRoom" Relationship="AreaModuleModel.FK_AnalyticsTalker_AnalyticsChatRoom" FromRole="AnalyticsTalker" ToRole="AnalyticsChatRoom" />
+    <NavigationProperty Name="AnalyticsMessagePools" Relationship="AreaModuleModel.FK_AnalyticsMessagePool_AnalyticsTalker" FromRole="AnalyticsTalker" ToRole="AnalyticsMessagePool" />
+    <NavigationProperty Name="AnalyticsSession" Relationship="AreaModuleModel.FK_AnalyticsTalker_AnalyticsSession" FromRole="AnalyticsTalker" ToRole="AnalyticsSession" />
+  </EntityType>
+  <Association Name="FK_AnalyticsTalker_AnalyticsChatRoom">
+    <End Type="AreaModuleModel.AnalyticsChatRoom" Role="AnalyticsChatRoom" Multiplicity="1" />
+    <End Type="AreaModuleModel.AnalyticsTalker" Role="AnalyticsTalker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsChatRoom">
+        <PropertyRef Name="ChatRoomID" />
+      </Principal>
+      <Dependent Role="AnalyticsTalker">
+        <PropertyRef Name="ChatRoomID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnalyticsMessagePool_AnalyticsTalker">
+    <End Type="AreaModuleModel.AnalyticsTalker" Role="AnalyticsTalker" Multiplicity="1" />
+    <End Type="AreaModuleModel.AnalyticsMessagePool" Role="AnalyticsMessagePool" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsTalker">
+        <PropertyRef Name="TalkerID" />
+      </Principal>
+      <Dependent Role="AnalyticsMessagePool">
+        <PropertyRef Name="talkerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AnalyticsTalker_AnalyticsSession">
+    <End Type="AreaModuleModel.AnalyticsSession" Role="AnalyticsSession" Multiplicity="1" />
+    <End Type="AreaModuleModel.AnalyticsTalker" Role="AnalyticsTalker" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AnalyticsSession">
+        <PropertyRef Name="UID" />
+      </Principal>
+      <Dependent Role="AnalyticsTalker">
+        <PropertyRef Name="SessionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

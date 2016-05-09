@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/Repositories
+END
+ShoutBoxData.edmx
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/Repositories/ShoutBoxData.edmx
+END
+ChatModel.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/indiv_scottso/!svn/ver/245/AnalyticsModule/ShoutBox/Repositories/ChatModel.Designer.cs
+END
+IShoutOutRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/Repositories/IShoutOutRepository.cs
+END
+ShoutBoxData.Designer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/Repositories/ShoutBoxData.Designer.cs
+END
+ChatModel.edmx
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/indiv_scottso/!svn/ver/245/AnalyticsModule/ShoutBox/Repositories/ChatModel.edmx
+END
+ShoutOutRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/Repositories/ShoutOutRepository.cs
+END

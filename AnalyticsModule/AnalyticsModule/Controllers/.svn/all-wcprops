@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/AnalyticsModule/Controllers
+END
+AdminController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/indiv_scottso/!svn/ver/217/AnalyticsModule/AnalyticsModule/Controllers/AdminController.cs
+END
+HomeController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/indiv_scottso/!svn/ver/217/AnalyticsModule/AnalyticsModule/Controllers/HomeController.cs
+END
+RouteTrackController.cs
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/indiv_scottso/!svn/ver/213/AnalyticsModule/AnalyticsModule/Controllers/RouteTrackController.cs
+END

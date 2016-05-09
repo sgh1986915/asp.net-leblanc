@@ -1,0 +1,15 @@
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\MvcApplication1.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\MvcApplication1.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\Microsoft.Practices.Unity.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\MvcContrib.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\RobustHaven.Areas.VideoModule.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\RobustHaven.Web.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\Telerik.Web.Mvc.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\Microsoft.Practices.ServiceLocation.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\RobustHaven.Areas.VideoModule.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\RobustHaven.Web.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\Microsoft.Practices.Unity.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\bin\Microsoft.Practices.ServiceLocation.pdb
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\obj\Debug\ResolveAssemblyReference.cache
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\obj\Debug\MvcApplication1.dll
+E:\Project\Odesk\Leblanc Meneses(ActiveX)\videomodule\Host\obj\Debug\MvcApplication1.pdb

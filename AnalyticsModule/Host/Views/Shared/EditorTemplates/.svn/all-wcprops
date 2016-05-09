@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates
+END
+Number.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/Number.ascx
+END
+Currency.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/Currency.ascx
+END
+DateTime.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/DateTime.ascx
+END
+Date.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/Date.ascx
+END
+Integer.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/Integer.ascx
+END
+Time.ascx
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/indiv_scottso/!svn/ver/197/AnalyticsModule/Host/Views/Shared/EditorTemplates/Time.ascx
+END

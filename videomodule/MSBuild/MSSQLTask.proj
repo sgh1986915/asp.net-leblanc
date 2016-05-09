@@ -1,0 +1,68 @@
+<Project ToolsVersion="4.0" DefaultTargets="UpdateAfterSvn" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<PropertyGroup>
+		<TemporaryFolder>$(MSBuildStartupDirectory)\tmp</TemporaryFolder>
+		
+		<RobustHavenTasksPath>$(MSBuildStartupDirectory)\MSBuild\</RobustHavenTasksPath>
+	</PropertyGroup>
+	<Import Project="$(RobustHavenTasksPath)\RobustHaven.Tasks.Targets"/>
+
+	<ItemGroup>
+		<FlexibleConfigParameters Include="MSBuildStartupDirectory">
+		  <Key>MSBuildStartupDirectory</Key>
+		  <Value>$(MSBuildStartupDirectory)\MSBuild\</Value>
+		</FlexibleConfigParameters>
+		<FlexibleConfigParameters Include="DevId">
+		  <Key>DevId</Key>
+		  <Value>$(DevId)</Value>
+		</FlexibleConfigParameters>
+		<FlexibleConfigParameters Include="DevLocation">
+		  <Key>DevLocation</Key>
+		  <Value>$(DevLocation)</Value>
+		</FlexibleConfigParameters>
+		<FlexibleConfigParameters Include="DevTask">
+		  <Key>DevTask</Key>
+		  <Value>$(DevTask)</Value>
+		</FlexibleConfigParameters>
+		<FlexibleConfigParameters Include="ApplicationId">
+		  <Key>ApplicationId</Key>
+		  <Value>$(ApplicationId)</Value>
+		</FlexibleConfigParameters>
+	</ItemGroup>
+
+	
+	<Target Name="UpdateAfterSvn">
+	
+		<RemoveDir Condition="Exists('$(TemporaryFolder)')" Directories="$(TemporaryFolder)" />
+		<MakeDir Directories="$(TemporaryFolder)" />
+		
+		<FlexibleConfig.FlexibleConfigTask
+			Parameters="@(FlexibleConfigParameters)"
+			BaseLineFile="$(MSBuildStartupDirectory)\MSBuild\DatabaseChangeManagement.config"
+			ErrorLogFile="$(MSBuildStartupDirectory)\Error.log"
+			OutputFile="$(TemporaryFolder)\tmp.config"
+		/>
+		
+		<DBChangeManagement.MSBuildTask.MSSQLTask 
+			TaskConfiguration="$(TemporaryFolder)\tmp.config"
+			EnvironmentName="INTEGRATION"
+			BackupLocation="$(MSBuildStartupDirectory)\Database\$(ApplicationId).bak"
+			DatabaseName="$(ApplicationId)"
+			ConnectionStringKey="dbhReader"
+			IsBackupEnabled="false"
+			ProductionOutputLocation="$(MSBuildStartupDirectory)\"
+			UpdateScriptsLocation="$(MSBuildStartupDirectory)\Database"/>
+
+			
+		<FlexibleConfig.FlexibleConfigTask
+			Parameters="@(FlexibleConfigParameters)"
+			BaseLineFile="$(MSBuildStartupDirectory)\MSBuild\Web.config"
+			ErrorLogFile="$(MSBuildStartupDirectory)\Error.log"
+			OutputFile="$(TemporaryFolder)\tmp.config"
+		/>
+		 
+		<Delete Files="$(MSBuildStartupDirectory)\Host\Web.config" />
+		<Move SourceFiles="$(TemporaryFolder)\tmp.config" DestinationFiles="$(MSBuildStartupDirectory)\Host\Web.config" />
+	
+	</Target>
+</Project>

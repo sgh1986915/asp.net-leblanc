@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TradingViewsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TradingViewsModelStoreContainer">
+    <EntitySet Name="ShoutBox" EntityType="TradingViewsModel.Store.ShoutBox" store:Type="Tables" Schema="ShoutBox" />
+  </EntityContainer>
+  <EntityType Name="ShoutBox">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="255" />
+    <Property Name="message" Type="text" Nullable="false" />
+    <Property Name="createdon" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>

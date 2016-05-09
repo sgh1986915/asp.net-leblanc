@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<flexibleconfig path="$(MSBuildStartupDirectory)\useroptions.include" />
+<configuration>
+	<connectionStrings>
+		<add name="dbhReader" connectionString="Persist Security Info=False;Integrated Security=true;server=<?=server ?>;pooling=false" />
+	</connectionStrings>
+</configuration>

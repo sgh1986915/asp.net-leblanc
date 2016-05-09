@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/ChatLogic
+END
+ChatRoom.cs
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/indiv_scottso/!svn/ver/247/AnalyticsModule/ShoutBox/ChatLogic/ChatRoom.cs
+END
+RoomTalker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/ChatLogic/RoomTalker.cs
+END
+Message.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/indiv_scottso/!svn/ver/225/AnalyticsModule/ShoutBox/ChatLogic/Message.cs
+END
+ChatManager.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/indiv_scottso/!svn/ver/247/AnalyticsModule/ShoutBox/ChatLogic/ChatManager.cs
+END
